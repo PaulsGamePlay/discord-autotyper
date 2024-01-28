@@ -3,14 +3,15 @@ const {types} = require("./utils/types");
 
 // list all the words here, will pick them randomly, doesn't matter how many!
 const words = [
-    "faucet-send 0xdde851A1C3cFEfb30F4587e9ad55D32e6E63E894"
+    "faucet",
+
 ]
 let logCount = 0;
 
-const BASE_URL = 'https://discord.com/channels/635865020172861441/929397287199866881';
-// change this & enter the channel url
+const BASE_URL = 'https://discord.com';
+const CHANNELS_URL = "https://discord.com/channels/635865020172861441/929397287199866881";
 const discord = {
-    browser: null,
+    browser: /Applications/Arc.app/Contents/MacOS/Arc,
     page: null,
 
     initialize: async () => {
@@ -80,7 +81,7 @@ const discord = {
      * @return {Promise<void>}
      */
 
-    likeChannelProcess: async (serverID, channelID, delay= 1) => {
+    likeChannelProcess: async (serverID = 635865020172861441, channelID = 929397287199866881, delay= 1) => {
             types('string', serverID);
             types('string', channelID);
             const CHANNELS_URL = `https://discord.com/channels/${serverID}/${channelID}`
@@ -120,7 +121,7 @@ const discord = {
 
             // change the first number for minutes
             // 3 * 60 * 1000 = 180000ms === 3 minutes
-            setInterval(randomWord, 5 * 60 * 1000)
+            setInterval(randomWord, .10 * 60 * 1000)
 
     }
 }
