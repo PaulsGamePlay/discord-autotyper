@@ -11,7 +11,7 @@ let logCount = 0;
 const BASE_URL = 'https://discord.com';
 const CHANNELS_URL = "https://discord.com/channels/635865020172861441/929397287199866881";
 const discord = {
-    browser: /Applications/Arc.app/Contents/MacOS/Arc,
+    browser: null,
     page: null,
 
     initialize: async () => {
@@ -81,7 +81,7 @@ const discord = {
      * @return {Promise<void>}
      */
 
-    likeChannelProcess: async (serverID = 635865020172861441, channelID = 929397287199866881, delay= 1) => {
+    likeChannelProcess: async (serverID, channelID , delay) => {
             types('string', serverID);
             types('string', channelID);
             const CHANNELS_URL = `https://discord.com/channels/${serverID}/${channelID}`
