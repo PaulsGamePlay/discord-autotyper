@@ -120,7 +120,7 @@ const discord = {
 
             // change the first number for minutes
             // 3 * 60 * 1000 = 180000ms === 3 minutes
-            setInterval(randomWord, delay * 60 * 1000)
+            setInterval(randomWord, 5 * 60 * 1000)
 
     }
 }
