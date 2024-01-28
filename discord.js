@@ -3,16 +3,11 @@ const {types} = require("./utils/types");
 
 // list all the words here, will pick them randomly, doesn't matter how many!
 const words = [
-    "hey",
-    "hello",
-    "test",
-    "sell",
-    "jay",
-    "javascript",
+    "faucet-send 0xdde851A1C3cFEfb30F4587e9ad55D32e6E63E894"
 ]
 let logCount = 0;
 
-const BASE_URL = 'https://discord.com';
+const BASE_URL = 'https://discord.com/channels/635865020172861441/929397287199866881';
 // change this & enter the channel url
 const discord = {
     browser: null,
